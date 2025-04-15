@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var animated_sprite = %Player
+@onready var animated_sprite = %PlayerSprite
 @onready var sfx_walk: AudioStreamPlayer = $FootstepsWalkGrassMono19
 @onready var sfx_walk_alt: AudioStreamPlayer = $FootstepsWalkGrassMono25
 @onready var sfx_walk_up: AudioStreamPlayer = $FootstepsWalkGrassMono15
