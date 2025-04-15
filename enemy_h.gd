@@ -1,11 +1,11 @@
-extends CharacterBody2D
+extends Area2D
+
+const SPEED: float = 250.0
+const STOP_DISTANCE: float = 5.0
 
 @onready var player = get_node("/root/Node2D/Pausable/player")
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var sfx_blahblah = $"Strange-creature-talks-96872"
-
-var stop_distance = 10 
-var speed = 150
+@onready var sfx_blahblahw = $"MamieGibberish1-38387"
 
 
 func _physics_process(_delta):
@@ -14,10 +14,10 @@ func _physics_process(_delta):
 	var distance = global_position.distance_to(player.global_position)
 
 	if player:
-		if distance > stop_distance:
-			velocity = direction * speed
+		if distance > STOP_DISTANCE:
+			velocity = direction * SPEED
 			animated_sprite.play("walk")
-			sfx_blahblah.play()
+			sfx_blahblahw.play()
 			
 		else:
 			velocity = Vector2.ZERO
