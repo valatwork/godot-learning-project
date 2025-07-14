@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 const SPEED: float = 250.0
 const STOP_DISTANCE: float = 5.0
