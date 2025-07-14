@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 const SPEED: float = 250.0
 const STOP_DISTANCE: float = 5.0
@@ -7,7 +7,7 @@ const STOP_DISTANCE: float = 5.0
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var sfx_blahblahw = $"MamieGibberish1-38387"
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	
 	var direction = (player.global_position - global_position).normalized()
 	var distance = global_position.distance_to(player.global_position)
